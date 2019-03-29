@@ -1,0 +1,172 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title text-center>
+            <b>les Ceréales</b>
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button expand="full" (click)="logout()">
+                <ion-icon name="log-out" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="openCart()">
+                <ion-badge *ngIf="cart.length > 0">{{ cart.lengnt }}</ion-badge>
+                <ion-icon name="cart" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>RIZ</ion-card-title>
+        </ion-card-header>
+        <ion-card>
+            <ion-card-content>
+
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/uncleR.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Riz uncle Sam rouge<br><span text-center>-50Kg<br> 19000 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/uncleV.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Riz uncle Sam Violet<br><span text-center>-50Kg<br> 19100 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/RIzzV.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Rizière viet Parfumé<br><span text-center>-900G<br> 550 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/rizv.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Rizière vietnam Parfumé<br><span text-center>-4,5Kg<br> 2500 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/maman.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Riz Maman<br><span text-center>-25Kg<br> 12000 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/maman1.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Riz Maman<br><span text-center>-5Kg<br> 2500 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-content>
+        </ion-card>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Maïs; Mil; Sorgho; Fonio</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-card>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/maïs.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Maïs<br><span text-center>-1Kg<br> 500 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/mil.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Mil<br><span text-center>-1Kg<br> 500 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/Sorgho.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Sorgho<br><span text-center>-1Kg<br> 650 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                        <ion-col>
+                            <div>
+                                <ion-card class="uR">
+                                    <ion-img src="/assets/Fonio.jpg"></ion-img>
+                                    <ion-card-header>
+                                        <ion-card-title>Fonio<br><span text-center>-1Kg<br> 700 FCFA</span></ion-card-title>
+                                        <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                                    </ion-card-header>
+                                </ion-card>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+        </ion-card-content>
+        <ion-col padding>
+             <p style="color: red" padding><ion-icon name="alert"></ion-icon> Pour efféctuer un Achat veillez ajouter la marchandise dans votre panier
+            d'abord et Lorsque vous aurez terminer rendez dans votre panier pour finaliser l'achat et choisir
+            le mode de paiement ainsi que le mode de livraison.<br> Merci pour votre confiance.</p>
+        </ion-col>
+    </ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+</ion-footer>

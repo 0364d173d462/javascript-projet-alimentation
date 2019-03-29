@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title text-center>
+            <b>les Feculents</b>
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button expand="full" (click)="logout()">
+                <ion-icon name="log-out" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button (click)="openCart()">
+                <ion-badge *ngIf="cart.length > 0">{{ cart.lengnt }}</ion-badge>
+                <ion-icon name="cart" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <div *ngFor="let cat of items" class="category-block">
+
+        <ion-row no-padding class="category-banner">
+            <ion-col text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
+                {{ cat.category }}
+            </ion-col>
+        </ion-row>
+
+    <ion-slides [options]="sliderConfig">
+       <ion-slide *ngFor="let product of cat.products">
+         <div *ngIf="cat.expanded">
+           <ion-card>
+               <ion-card-header>
+                   <ion-card-title>
+                       {{ product.name }}  {{product.amount}} à {{ product.price }} FCFA
+                   </ion-card-title>
+                   <ion-card-content>
+                       <img src="/assets/feculents.jpeg">
+                       <ion-button expand="full" (click)="addToCart(product)">Ajouter au panier</ion-button>
+                   </ion-card-content>
+               </ion-card-header>
+           </ion-card>
+         </div>
+       </ion-slide>
+    </ion-slides>
+
+    </div>
+
+    <ion-col padding>
+        <p style="color: red" padding><ion-icon name="alert"></ion-icon> Pour efféctuer un Achat veillez ajouter la marchandise dans votre panier
+            d'abord et Lorsque vous aurez terminer rendez dans votre panier pour finaliser l'achat et choisir
+            le mode de paiement ainsi que le mode de livraison.<br> Merci pour votre confiance.</p>
+    </ion-col>
+
+</ion-content>
+<ion-footer>
+
+</ion-footer>

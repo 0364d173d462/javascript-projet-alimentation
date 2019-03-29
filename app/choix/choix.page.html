@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title text-center>choix</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+      <h3>Veillez choisir le mode paiement et le mode de livraison </h3>
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>MODE DE PAIEMENT</ion-label>
+          </ion-list-header>
+
+          <ion-item>
+            <ion-label>Mobile Money</ion-label>
+            <ion-radio slot="start" value="biff" checked></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Carte Bancaire</ion-label>
+            <ion-radio slot="start" value="griff"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Paiement a la livraison</ion-label>
+            <ion-radio slot="start" value="buford"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label>MODE DE LIVRAISON</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Livraison à Domicile</ion-label>
+        <ion-radio slot="start" value="griff"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Livraison dans une Agence</ion-label>
+        <ion-radio slot="start" value="buford"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+ <ion-button expand="full" color="secondary" routerLink="/modal">Soumettre</ion-button>
+</ion-content>

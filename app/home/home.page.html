@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar [color]="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <b>Accueil</b>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button expand="full" (click)="logout()">
+        <ion-icon name="log-out" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()">
+        <ion-badge *ngIf="cart.length > 0">{{ cart.lengnt }}</ion-badge>
+        <ion-icon name="cart" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/alim.jpeg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>BabyMarket</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p></p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none">
+      <ion-list-header>
+        <br>
+        <ion-label style="font-size: 30px;">Catégories</ion-label>
+        <br>
+      </ion-list-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 >
+            <ion-card class="lists" routerLink="/feculent">
+              <ion-img class="img-circle" src="/assets/feculent.jpeg"></ion-img>
+              <ion-card-title expand="full">
+                    <ion-card-header>
+                    Feculents
+                   </ion-card-header>
+                  </ion-card-title>
+            </ion-card>
+          </ion-col>
+          <ion-col col-6>
+            <ion-card class="lists">
+            <ion-img class="img-circle" src="/assets/cereales.jpeg"></ion-img>
+              <ion-card-header routerLink="/cereals">
+                <ion-card-title style="text-align: center; font-size: 28px">Céréals</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <br>
+        <ion-row>
+          <ion-col col-6>
+            <ion-card class="lists" routerLink="/fruits">
+            <ion-img src="/assets/fruit.jpeg"></ion-img>
+              <ion-card-header>
+                <ion-card-title style="text-align: center; font-size: 28px">Fruits</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+          <ion-col col-4>
+            <ion-card class="lists" routerLink="./legumes">
+            <ion-img src="/assets/legumes.jpeg"></ion-img>
+              <ion-card-header>
+                <ion-card-title style="text-align: center; font-size: 28px">Légumes</ion-card-title>
+              </ion-card-header>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <ion-card class="lists1" routerLink="./feuilles">
+                <ion-img src="/assets/feuille.jpg"></ion-img>
+                <ion-card-header>
+                  <ion-card-subtitle></ion-card-subtitle>
+                  <ion-card-title style="text-align: center; font-size: 20px">Feuilles et bulbes</ion-card-title>
+                </ion-card-header>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  <ion-col padding>
+    <p style="color: red" padding><ion-icon name="alert"></ion-icon> Pour efféctuer un Achat veillez vous rendre dans la catégorie d'aliments que vous désirez et ajouter là dans votre panier
+      d'abord et Lorsque vous aurez terminer rendez dans votre panier pour finaliser l'achat et choisir
+      le mode de paiement ainsi que le mode de livraison.<br> Merci pour votre confiance.</p>
+  </ion-col>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ data }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer style="background-color: whitesmoke" padding>
+  <div style="text-align: center">
+    <span style="color: grey">© 2019 BabyMarket, tous droits reservé</span><br>
+    <b style="color: darkgray">By <a href="">Auguinard Kouame</a> & <a href="">Genesis NaN</a></b>
+  </div>
+</ion-footer>
